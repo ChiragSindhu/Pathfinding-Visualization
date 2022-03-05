@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Pathfinding Visualizing</title>
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="scripts/core.js"></script>
+    <script src="scripts/functionality.js"></script>
+    <script src="scripts/behaviour.js"></script>
+
+    <!--Algorithm-->
+    <script src="Algorithms/A_pathfinding.js"></script>
+    <script src="Algorithms/Greedy.js"></script>
+    <script src="Algorithms/Dijkstra.js"></script>
+    <script src="Algorithms/DFS.js"></script>
+
+    <link rel="stylesheet" href="stylesheets/coreStylesheet.css">
+    <link rel="stylesheet" href="stylesheets/mapStylesheet.css">
+</head>
+<body>
+    <div id="button1Heading">Points</div>
+    <input class="button" id="startPoint" type="button" onclick="changeStartPointEnabled();" value="Start Point">
+    <input class="button" id="endPoint" type="button" onclick="changeEndPointEnabled();" value="End Point">
+    <input class="button" id="obstaclePoint" type="button" onclick="changeObstacleEnabled();" value="Obstacle">
+    <input class="button" id="pathPoint" type="button" onclick="changePathEnabled();" value="Path">
+    
+    <br>
+    
+    <div id="button2Heading">Pathfinding Algorithms</div>
+    <div style="margin-bottom: 15px; display: flex;flex-direction: row;align-items: center;">
+        <div style="width: 170px;">
+            <input class="button" id="DIJKSTRA" type="button" onclick="dijkstraAlgo(0);" value="Dijkstra">
+            <img src = "media/loading.png" id="loadingBufferDIJKSTRA">
+        </div>
+        <div style="width: 170px;">
+            <input class="button" id="ASTART" type="button" onclick="aPathfinding();" value="A* Pathfinding">
+            <img src = "media/loading.png" id="loadingBufferASTART">
+        </div>
+        <div style="width: 170px;">
+            <input class="button" id="GREEDY" type="button" onclick="greedBestFirst();" value="Greedy Best First">
+            <img src = "media/loading.png" id="loadingBufferGREEDY">
+        </div>
+        <div style="width: 170px;">
+            <input class="button" id="BFS" type="button" onclick="bfsAlgo();" value="BFS">
+            <img src = "media/loading.png" id="loadingBufferBFS">
+        </div>
+        <div style="width: 170px;">
+            <input class="button" id="DFS" type="button" onclick="dfsAlgo();" value="BFS">
+            <img src = "media/loading.png" id="loadingBufferDFS">
+        </div>
+    </div>
+    <br>
+    <div id="button2Heading">Settings</div>
+    <input class="button" id="changeSpeed" type="button" onclick="changeSpeed();" value="Speed Slow">
+    <input class="button" id="randomMaze" type="button" onclick="randomMaze();" value="Random Maze">
+    <input class="button" id="resetSetting" type="button" onclick="resetMap();" value="Reset/Stop">
+    <input class="button" id="resetWallSetting" type="button" onclick="resetWalls();" value="Clear Walls">
+
+    <div id="gameMap">
+        <div id="rootHeading">Pick an algorithm and visualize it!</div>
+        <div id="root"></div>
+    </div>
+    
+</body>
+</html>
