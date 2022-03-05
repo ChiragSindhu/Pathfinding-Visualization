@@ -1,0 +1,135 @@
+*{
+    margin: 0px;
+    padding: 0px;   
+}
+
+body{
+    overflow: hidden;
+}
+
+.button {
+    width: 150px;
+    height: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    border-radius: 5px;
+    border: none;
+
+    color: white;
+
+    margin: 5px;
+    cursor: pointer;
+
+    letter-spacing: 1px;
+
+    transition: opacity 0.2s;
+}
+
+.button:hover{
+    opacity: 0.7;
+}
+
+.button:active {
+    opacity: 0.5;
+}
+
+#startPoint{
+    background-color: rgb(15, 207, 255);
+}
+
+#endPoint {
+    background-color: rgb(179, 15, 255);
+}
+
+#obstaclePoint{
+    background-color: rgb(80, 80, 80);
+}
+
+#pathPoint{
+    background-color: white;
+    border: 0.5px solid gray;
+    color: gray;
+}
+
+#ASTART{
+    background-color: rgb(255, 153, 0);
+
+    position: absolute;
+}
+
+#GREEDY {
+    background-color: rgb(255, 0, 55);
+
+    position: absolute;
+}
+
+#DIJKSTRA{
+    background-color: rgb(255, 0, 98);
+
+    position: absolute;
+}
+
+#BFS {
+    background-color: rgb(0, 255, 213);
+
+    position: absolute;
+}
+
+#DFS {
+    background-color: rgb(195, 0, 255);
+
+    position: absolute;
+}
+
+#randomMaze {
+    background-color: rgb(80, 80, 80);
+}
+
+#changeSpeed {
+    background-color: rgb(50, 255, 204);
+}
+
+#resetSetting{
+    background-color: rgb(80, 80, 80);
+}
+
+#resetWallSetting {
+    background-color: rgb(80, 80, 80);
+}
+
+#button1Heading,
+#button2Heading,
+#button3Heading{
+    font-size: 15px;
+    margin: 5px 0px 2px 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(77, 77, 77);
+
+    font-weight: bold;
+}
+
+#loadingBufferASTART,
+#loadingBufferDIJKSTRA,
+#loadingBufferBFS,
+#loadingBufferDFS,
+#loadingBufferGREEDY {
+    width: 12%;
+    
+    top: 20px;
+    left: 70px;
+
+    pointer-events: none;
+    position: relative;
+
+    animation: rotAnimation 1.2s infinite linear;
+}
+
+@keyframes rotAnimation{
+    0%{
+        transform: rotateZ(0deg);
+    }
+
+    100%{
+        transform: rotateZ(360deg);
+    }
+}

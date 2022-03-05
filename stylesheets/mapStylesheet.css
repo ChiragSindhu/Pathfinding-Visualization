@@ -1,0 +1,86 @@
+#gameMap {
+    margin: 0px 0px 40px 50%;
+
+    transform: translateX(-50%);
+    padding: 0px 1.5% 1.5% 1.5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#root {
+    width: 100%;
+    margin: 5px 0% 0px 0%;
+
+    display: grid;
+}
+
+#rootHeading {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    letter-spacing: 5px;
+
+    color: rgb(54, 54, 54);
+}
+
+.node,
+.startNode,
+.endNode,
+.neighbour,
+.currentNode,
+.obstacle,
+.path {
+    width: 24px;
+    height: 24px;
+
+    display: block;
+    border: 0.1px solid rgb(175, 175, 175);
+    margin: 0.1px;
+
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.startNode {
+    border-radius: 50%;
+    background-color: rgb(15, 207, 255);
+    border: none;
+}
+
+.endNode {
+    border-radius: 50%;
+    background-color: rgb(179, 15, 255);
+    border: none;
+}
+
+.neighbour {
+    background-color: lightgreen;
+    border: none;
+}
+
+.currentNode {
+    background-color: rgb(255, 56, 56);
+}
+
+.obstacle {
+    background-color: rgb(80, 80, 80);
+    border: none;
+}
+
+.path {
+    background-color: yellow;
+    border: none;
+}
+
+@keyframes bounceAnimation {
+    50% {
+        transform: scale(75%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
